@@ -1,82 +1,98 @@
 body {
-    margin: 0
+    margin: 0;
+    text-decoration: none;
 }
 
-nav {
-  background-color: #f0efef;
-  width: 100%;
+header {
+  height: 15vh;
+  width: 100vw;
+}
+
+.navbar {
+  position: absolute;
+  background-color: #F0EFEF;
+  padding: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
-}
-
-.imglo {
-  width: 50px;
-  padding-left: 10px;
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-nav h1 {
-  width: 500px;
-  text-decoration: none;
-  font: 400 20px "Gotham", sans-serif;
-}
-
-nav ul {
-  list-style: none;
+  align-items: center;
   width: 100%;
-  text-align: right;
-  padding-right: 20px;
+  box-sizing: border-box;
 }
 
-nav ul li{
-  display: inline-block;
-  margin: 10px 20px;
+.navbar .imglo{
+  width: 200px;
 }
 
-nav ul li a{
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a{
   color: #000000;
   text-decoration: none;
   font: 400 16px "Gotham", sans-serif;
 }
 
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  width: 30px;
+  top: 10;
+  right: 20px;
+}
+
 .fdn {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
   background-image: url(images/fonds.png);
 }
 
 .footer {
-  width: 96%;
-  height: 100px;
-  padding: 30px;
-  background: #000000;
-  color: #ffff;
+  background-color: #000000;
+  padding: 45px 0;
+}
+
+.container {
+  max-width: 1920px;
+  margin:auto;
+}
+
+.row {
   display: flex;
-  font: 200 15px "Gotham", sans-serif;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
+  flex-wrap: wrap;
 }
 
-.col3 {
-  text-align: right;
+ul {
+  list-style: none;
 }
 
-.footer div h3{
+.footer-col {
+  width: 31%;
+  padding: 0 15px;
+  color: #ffff;
+  font: 600 18px "Gotham", sans-serif;
   margin-bottom: 30px;
-  letter-spacing: 1px;
+  position: relative;
 }
 
-.socials {
-  padding-right: 150px;
-  margin-top: 20px;
+.footer-col ul li:not(:last-child){
+  margin-bottom: 5px;
 }
 
-.socials i {
+.footer-col .socials a{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 35px 20px 20px 0;
+  text-align: center;
+  line-height: 40px;
   font-size: 40px;
-  margin: 10px;
-  cursor: pointer;
+  color: #ffff;
 }
 
 .gal {
@@ -84,7 +100,7 @@ nav ul li a{
   display: flex;
   flex-wrap: wrap;
   margin: 70px 50px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .galb {
@@ -132,6 +148,7 @@ nav ul li a{
 
 .left, .cop p {
   font: 300 16px "Gotham", sans-serif;
+  margin-bottom: 50px;
 }
 
 .right, .cop h3 {
@@ -180,6 +197,7 @@ label {
 }
 
 @media screen and (min-width: 900px) {
+
   .split {
     margin-left: 90px;
     flex-direction: row;
@@ -188,4 +206,55 @@ label {
     display: flex;
     width: 50%;
   }
+}
+
+@media screen and (max-width:900px){
+
+  .navbar{
+    padding: 0;
+  }
+
+  .navbar .menu-hamburger {
+    display: block;
+  }
+  .nav-links {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #F0EFEF;
+    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links.mobile-menu {
+    margin-left: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 2em;
+  }
+
+
+  .footer-col{
+    width: 100%;
+    margin: 0 20px 0 30px;
+  }
+
+  .galb {
+    margin-bottom: 125px;
+  }
+
 }
