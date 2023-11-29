@@ -10,36 +10,59 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <a href="index.html"><img class="imglo" src="images/logo.jpg" alt="Logo"></a>
-            <h1>Dédal des couleurs</h1>
+
+    <nav class="navbar">
+        <a href="index.html"><img class="imglo" src="images/logo.png" alt="Logo"></a>
+        <div class="nav-links">
             <ul>
                 <li><a href="index_expositions.html">Expositions</a></li>
                 <li><a href="index_contact.html">Contact</a></li>
                 <li><i class="fa-solid fa-magnifying-glass"></i></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+        <img src="images/hamburger.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    <header></header>
 
     <div class="fdn">
         <a href="index_expositions.html"><img class="fdn" src="images/fond.png" alt="fond"></a>
     </div>
 
-    <div class="footer">
-        <div class="col1">
-            <h3>DEDAL DES COULEURS<br/>10 Rue de la République<br/>75000 PARIS</h3>
-        </div>
-        <div class="col2"></div>
-            <div class="socials">
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-tiktok"></i>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li>DEDAL DES COULEURS</li>
+                        <li>10 Rue de la République</li>
+                        <li>75000 PARIS</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="socials">
+                        <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <li>Tel : 01.63.45.85.56</li>
+                        <li>Fax : 01.63.45.78.52</li>
+                        <li>Email : dedal@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-        <div class="col3">
-            <h3>Tel : 01.63.45.85.56<br/>Fax : 01.63.45.78.52<br/>Email : dedal@gmail.com</h3>
         </div>
-    </div>
+    </footer>
 </body>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('.mobile-menu')
+        })
+    </script>
 </html>
